@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lifestyle Theme</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .card-img-top {
+            height: 400px;
+            width: 100%; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Lifestyle Vibes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="fashion.html">Fashion</a>
+                        <a class="dropdown-item" href="Sports.html">Sports</a>
+                        <a class="dropdown-item" href="food.html">Healhty</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="btn btn-primary nav-link" href="#subs" role="button">Subscribe</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="text-center">Fashion Trends</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1724452142667-60001222f706?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8UzRNS0xBc0JCNzR8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Fashion 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Chic Summer Outfits</h5>
+                        <p class="card-text">Discover the latest summer trends that will keep you stylish and cool.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1677863689705-3ddbb9dc6793?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Fashion 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Fashion Show</h5>
+                        <p class="card-text">Model in a fashion show at FAMU: Tallahassee</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1722999780806-85aed85fe370?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Fashion 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Developer Fashion</h5>
+                        <p class="card-text">Riccardo Spagni is an entrepreneur and the lead developer of Monero cryptocurrency.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <section class="bg-light py-5" id="subs">
+        <div class="container">
+            <article class="text-center">
+                <h2>Join Our Community</h2>
+                <h3>Subscribe for the latest lifestyle updates</h3>
+                <form class="form-inline justify-content-center">
+                    <input type="text" id="firstname" name="firstname" class="form-control mb-2 mr-sm-2" placeholder="First Name" required />
+                    <input type="email" id="email" name="email" class="form-control mb-2 mr-sm-2" placeholder="Email" required />
+                    <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <small>
+            <a href="#">Privacy Policy</a> •
+            <a href="#">Terms & Conditions</a>
+        </small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
