@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,15 +10,18 @@
         html {
             scroll-behavior: smooth;
         }
+
         .container {
             margin-top: 50px;
         }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Lifestyle Vibes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,7 +30,8 @@
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,7 +48,7 @@
     <main class="container">
         <h2>Contact Us</h2>
         <p>If you have any questions, feel free to reach out to us using the form below.</p>
-        
+
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -63,29 +68,58 @@
         </form>
     </main>
 
-    <section class="bg-light py-5" id="subs" style="margin-top: 50px;">
+    <section class="bg-light py-5" id="subs">
         <div class="container">
             <article class="text-center">
                 <h2>Join Our Community</h2>
                 <h3>Subscribe for the latest lifestyle updates</h3>
-                <form class="form-inline justify-content-center">
+                <form class="form-inline justify-content-center" onsubmit="return validateSelect()">
                     <input type="text" id="firstname" name="firstname" class="form-control mb-2 mr-sm-2" placeholder="First Name" required />
-                    <input type="email" id="email" name="email" class="form-control mb-2 mr-sm-2" placeholder="Email" required />
+                    <input type="email" id="email" name="email" class="form-control mb-2 mr-sm-2" placeholder="Email"required />
+
+                    <select id="category" class="form-control mb-2 mr-sm-2" required>
+                        <option value="1" disabled selected>Select a category</option>
+                        <option value="2">All</option>
+                        <option value="3">Fashion</option>
+                        <option value="4">Sports</option>
+                        <option value="5">Healthy</option>
+                    </select>
+
                     <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
                 </form>
+                <div id="alert-container" class="mb-0"></div>
             </article>
         </div>
     </section>
 
-    <footer class="text-center py-3">
+    <footer class="text-center py-1">
         <small>
             <a href="#">Privacy Policy</a> •
             <a href="#">Terms & Conditions</a>
         </small>
     </footer>
 
+    <script>
+        function validateSelect() {
+            const category = document.getElementById("category").value;
+
+            document.getElementById("alert-container").innerHTML = "";
+
+            if (category === "1") {
+                const alertHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Please select a category before subscribing !
+                    </div>`;
+                document.getElementById("alert-container").innerHTML = alertHTML;
+                return false;
+            }
+            return true;
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
